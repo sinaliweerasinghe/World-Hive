@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lifestyle & Hobby - Wonder Reads</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="lifej1.css">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <!-- Bootstrap Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <!-- Logo Image -->
+            <a class="navbar-brand" href="index.html">
+                <img src="logo.jpg" alt="Word Hive Logo" class="navbar-logo">
+                <span class="brand-name">Word Hive</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="fiction.html">Fiction</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="page.html">Fairy Tales</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="page3.html">Non-Fiction</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="AcademicBook.html">Academic</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="lifestylehobby.html">Lifestyle</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container mt-5">
+        <!-- Section 1: Book 1 Details -->
+        <div class="row mb-5" id="book-section">
+            <div class="col-md-6">
+                <img src="life.jpg" alt="Lifestyle Book" class="img-fluid rounded book-image" data-original-src="life.jpg" data-alt-src="life2.jpg">
+            </div>
+            <div class="col-md-6">
+                <h2 class="book-title">The Life-Changing Magic of Tidying Up</h2>
+                <p class="lead author-name">by Marie Kondo</p>
+                <p class="book-description">
+                    This book is a guide to decluttering and organizing your home and life. Marie Kondo introduces the KonMari Method, 
+                    a simple and effective way to tidy up your space and transform your life. Learn how to keep only the things that 
+                    spark joy and let go of the rest.
+                </p>
+                
+                <button class="btn btn-primary excerpt-btn">Read Excerpt</button>
+                <button class="btn btn-success hardcover-btn">Get Hardcover</button>
+                <button class="btn btn-warning audiobook-btn">Listen to Audiobook</button>
+                <button class="btn btn-info mt-2" id="toggle-effects">Toggle Effects</button>
+            </div>
+        </div>
+
+        <!-- Section 2: Author 1 Details -->
+        <div class="row mb-5" id="author-section">
+            <div class="col-md-6">
+                <h2 class="book-title1">About the Author</h2>
+                <p class="lead">Marie Kondo</p>
+                <p class="author-bio">
+                    Marie Kondo is a Japanese organizing consultant and author. She is best known for her KonMari Method of tidying, 
+                    which has helped millions of people around the world declutter their homes and lives. Her books have been 
+                    translated into multiple languages and have sold millions of copies worldwide.
+                </p>
+            </div>
+            <div class="col-md-6">
+                <img src="marie.jpeg" alt="Marie Kondo" class="img-fluid rounded-circle author-image">
+            </div>
+        </div>
+
+        <!-- Section 3: Another 2 Book -->
+        <div class="row mb-5" id="second-book-section">
+            <div class="col-md-6">
+                <img src="atomics.jpg" alt="Another Lifestyle Book" class="img-fluid img-thumbnail custom-image-style" style="max-width: 70%; height: auto;" id="atomic-habits-img">
+            </div>
+            <div class="col-md-6">
+                <h2 class="book-title2">Atomic Habits</h2>
+                <p class="lead">by James Clear</p>
+                <p class="book-description">
+                    "Atomic Habits" is a practical guide to building good habits and breaking bad ones. James Clear explains how small 
+                    changes can lead to remarkable results over time. This book is perfect for anyone looking to improve their lifestyle 
+                    and achieve their goals.
+                </p>
+                <div class="form-group">
+                    <label for="color-picker">Change text color:</label>
+                    <input type="color" id="color-picker" value="#ffffff">
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 4: Author 2 Details -->
+        <div class="row mb-5" id="author-section">
+            <div class="col-md-6">
+                <h2 class="book-title3">About the Author</h2>
+                <p class="lead">James Clear</p>
+                <p class="author-bio">
+                    James Clear (born 1986) is an American writer. He is best known for his book Atomic Habits. Raised in Hamilton, Ohio, Clear received his degree in biomechanics from Denison University in 2008, where he also served as captain of the baseball team. During his time at university he took part at the St. Gallen Symposium twice and won the Global Essay Competition in his second year attending.
+                </p>
+            </div>
+            <div class="col-md-6">
+                <img src="james.jpeg" alt="Marie Kondo" class="img-fluid rounded-circle author-image">
+            </div>
+        </div>
+
+        <!-- Section 5: JSON/AJAX Functionality -->
+        <div class="row mb-5" id="json-ajax-section">
+            <div class="col-md-12">
+                <h2 class="mt-5 mb-4">Book Management</h2>
+        
+                <div class="card mb-4">
+                    <div class="card-header bg-primary text-white">
+                        <h4>Add New Book</h4>
+                    </div>
+                    <div class="card-body">
+                        <form id="add-book-form">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group mb-3">
+                                        <label for="book-title">Title</label>
+                                        <input type="text" class="form-control" id="book-title" required>
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label for="book-author">Author</label>
+                                        <input type="text" class="form-control" id="book-author" required>
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label for="book-copies">Copies Sold</label>
+                                        <input type="text" class="form-control" id="book-copies" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group mb-3">
+                                        <label for="book-awards">Awards</label>
+                                        <input type="text" class="form-control" id="book-awards" required>
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label for="book-translations">Translations</label>
+                                        <input type="text" class="form-control" id="book-translations" required>
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label for="book-description">Description</label>
+                                        <textarea class="form-control" id="book-description" rows="2" required></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-success">Add Book</button>
+                        </form>
+                    </div>
+                </div>
+        
+                <div class="card mb-4">
+                    <div class="card-header bg-info text-white">
+                        <h4>View Books</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <button id="load-all-books" class="btn btn-primary mb-3">Load All Books</button>
+                                <div id="all-books-container" class="mb-4"></div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group mb-3">
+                                    <label for="book-id">Enter Book ID:</label>
+                                    <input type="number" class="form-control" id="book-id" min="1">
+                                </div>
+                                <button id="load-single-book" class="btn btn-warning mb-3">Load Single Book</button>
+                                <div id="single-book-container"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 5: Tables -->
+        <h2 class="mt-5 mb-4">Book Information</h2>
+        <div class="row mb-5" id="tables-section">
+            <!-- Table 1: Book Sales -->
+            <div class="col-md-4">
+                <h3>Book Sales</h3>
+                <table class="table table-striped table-hover sales-table">
+                    <thead>
+                        <tr>
+                            <th>Book Title</th>
+                            <th>Copies Sold</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>The Life-Changing Magic of Tidying Up</td>
+                            <td>11 million</td>
+                        </tr>
+                        <tr>
+                            <td>Atomic Habits</td>
+                            <td>5 million</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button class="btn btn-sm btn-secondary" id="add-sale-row">Add Row</button>
+            </div>
+
+            <!-- Table 2: Book Awards -->
+            <div class="col-md-4">
+                <h3>Book Awards</h3>
+                <table class="table table-striped table-hover awards-table">
+                    <thead>
+                        <tr>
+                            <th>Book Title</th>
+                            <th>Awards</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>The Life-Changing Magic of Tidying Up</td>
+                            <td>Goodreads Choice Award</td>
+                        </tr>
+                        <tr>
+                            <td>Atomic Habits</td>
+                            <td>New York Times Bestseller</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button class="btn btn-sm btn-secondary" id="highlight-awards">Highlight Awards</button>
+            </div>
+
+            <!-- Table 3: Book Translations -->
+            <div class="col-md-4">
+                <h3>Book Translations</h3>
+                <table class="table table-striped table-hover translations-table">
+                    <thead>
+                        <tr>
+                            <th>Book Title</th>
+                            <th>Languages</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>The Life-Changing Magic of Tidying Up</td>
+                            <td>40+</td>
+                        </tr>
+                        <tr>
+                            <td>Atomic Habits</td>
+                            <td>30+</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button class="btn btn-sm btn-secondary" id="animate-translations">Animate</button>
+            </div>
+        </div>
+
+        <!-- Section 6: Fun Facts About the Books -->
+        <h2 class="mt-5 mb-4">Fun Facts About the Books</h2>
+        <div class="row mb-5" id="fun-facts-section">
+            <!-- Fun Fact 1 -->
+            <div class="col-md-4">
+                <div class="card bg-light text-dark fun-fact-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Did You Know?</h5>
+                        <p class="card-text">
+                            "The Life-Changing Magic of Tidying Up" has sold over 11 million copies worldwide and has been translated 
+                            into more than 40 languages.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fun Fact 2 -->
+            <div class="col-md-4">
+                <div class="card bg-light text-dark fun-fact-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Fun Fact</h5>
+                        <p class="card-text">
+                            Marie Kondo's KonMari Method has inspired a Netflix series called "Tidying Up with Marie Kondo."
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fun Fact 3 -->
+            <div class="col-md-4">
+                <div class="card bg-light text-dark fun-fact-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Interesting Fact</h5>
+                        <p class="card-text">
+                            "Atomic Habits" has been on the New York Times bestseller list for over 100 weeks.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add this button anywhere in your HTML where you want it to appear -->
+    <div class="dom-diagram-btn-container text-center my-4">
+        <a href="dom.jpg" class="btn btn-info dom-diagram-btn" target="_blank">
+            <i class="fas fa-project-diagram me-2"></i> View DOM Diagram
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="footer-brand">
+                        <img src="logo.jpg" alt="Word Hive Logo" class="footer-logo">
+                        <h4>Word Hive</h4>
+                    </div>
+                    <p>Your premier destination for academic resources and learning materials.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-md-2">
+                    <h5>Categories</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Fiction</a> <span class="team-badge" title="Member A"></span></li>
+                        <li><a href="#">Fairy Tales</a> <span class="team-badge" title="Member B"></span></li>
+                        <li><a href="#">Non-Fiction</a> <span class="team-badge" title="Member C"></span></li>
+                        <li><a href="#">Academic</a> <span class="team-badge" title="Member D"></span></li>
+                        <li><a href="#">Lifestyle</a> <span class="team-badge" title="Member E"></span></li>
+                    </ul>
+                </div>
+                
+                <div class="col-md-2">
+                    <h5>Resources</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Reading Guides</a> <span class="team-badge" title="Member A"></span></li>
+                        <li><a href="#">Story Analysis</a> <span class="team-badge" title="Member B"></span></li>
+                        <li><a href="#">Research Tools</a> <span class="team-badge" title="Member C"></span></li>
+                        <li><a href="#">Study Materials</a> <span class="team-badge" title="Member D"></span></li>
+                        <li><a href="#">Wellness Tips</a> <span class="team-badge" title="Member E"></span></li>
+                    </ul>
+                </div>
+                
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Academic Way, Education City</li>
+                        <li><i class="fas fa-phone"></i> (+94) 456-789-109</li>
+                        <li><i class="fas fa-envelope"></i> info@wordhive.com</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2025</span> Word Hive. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery Script -->
+    <script>
+        $(document).ready(function() {
+            // ========== DOM Traversal Examples ==========
+            // 1.find(): Find all paragraphs inside book description and log them (to locate specific elements)
+            $(".book-description").find("p").each(function() {
+                console.log("Found paragraph in book description:", $(this).text());
+            });
+            
+            // 2. parent(): Find parent row of the author image parent()
+            $(".author-image").parent().css("border", "2px dashed #2373c8");
+            
+            // 3. next(): Find next sibling of the book title next()
+            $(".book-title").next().addClass("text-primary");
+            
+            
+            // ========== DOM Modification Examples ==========
+            // 1.append(): Add a new content to book description (to add or change content)
+            $(".book-description").append("<p><em>Now a #1 New York Times Bestseller!</em></p>");
+            
+            // 2. prepend(): Prepend content to author bio
+            $(".author-bio").prepend("<strong>Author Spotlight: </strong>");
+            
+            // 3. html(): Replace content in one of the cards
+            $(".fun-fact-card:first .card-text").html("This book has <strong>revolutionized</strong> how people think about organization!");
+            
+            
+            // ========== DOM Attribute Modification Examples ==========
+            // 1. Change image source on click
+            $(".book-image").click(function() {
+                const currentSrc = $(this).attr("src");
+                const originalSrc = $(this).data("original-src");
+                const altSrc = $(this).data("alt-src");
+                
+                $(this).attr("src", currentSrc === originalSrc ? altSrc : originalSrc);
+            });
+            
+            // 2. Add title attribute to all images
+            $("img").attr("title", "Click me for more info");
+            
+            // 3. Toggle class on navbar
+            $("#main-logo").hover(function() {
+                $(this).toggleClass("img-glow");
+            });
+            
+            
+            // ========== CSS Manipulation Examples ==========
+            // 1. hover(): Change background color of cards on hover
+            $(".fun-fact-card").hover(
+                function() {
+                    $(this).css("background-color", "#e6f7ff");
+                },
+                function() {
+                    $(this).css("background-color", "");
+                }
+            );
+            
+            // 2. css(): Changes the text color using color picker
+            $("#color-picker").change(function() {
+                const color = $(this).val();
+                $("body").css("color", color);
+            });
+            
+            // 3. toggleClass(): Toggles a rainbow effect on book titles.
+            $("#toggle-effects").click(function() {
+                $(".book-title").toggleClass("text-rainbow");
+                $(".book-title1").toggleClass("text-rainbow");
+                $(".book-title2").toggleClass("text-rainbow");
+                $(".book-title3").toggleClass("text-rainbow");
+            });
+            
+            
+            // ========== JavaScript Effects Examples ==========
+            // 1. fadeIn(): Fade in tables when page load
+            $("#tables-section").hide().fadeIn(2000);
+            
+            // 2. slideToggle(): Hides or shows card text when the card title is clicked.
+            $(".card-title").click(function() {
+                $(this).siblings(".card-text").slideToggle();
+            });
+            
+            // 3. animate(): Bounces the translations table for a fun effect.
+            $("#animate-translations").click(function() {
+                $(".translations-table").animate({
+                    opacity: 0.5,
+                    marginLeft: "20px"
+                }, 500).animate({
+                    opacity: 1,
+                    marginLeft: "0"
+                }, 500);
+            });
+            
+            
+            // ========== HTML Events Examples ==========
+            // 1. click(): Shows an alert when “Read Excerpt” button is clicked.
+            $(".excerpt-btn").click(function() {
+                alert("Excerpt loading... This would open a modal in a real implementation.");
+            });
+            
+            // 2. dblclick(): Highlights author section on double-click.
+            $("#author-section").dblclick(function() {
+                $(this).toggleClass("highlight-section");
+            });
+            
+            // 3. on('input'): Updates text color in real time via a color picker.
+            $("#color-picker").on("input", function() {
+                $(".atomic-description").css("color", $(this).val());
+            });
+            
+            // Additional interactive elements
+            //Adds a new row to the sales table dynamically.
+            $("#add-sale-row").click(function() {
+                $(".sales-table tbody").append("<tr><td>New Book</td><td>0</td></tr>");
+            });
+            
+            //Highlights rows with award information.
+            $("#highlight-awards").click(function() {
+                $(".awards-table td:contains('Award')").parent().css("background-color", "#f5b8b8");
+            });
+            
+            // Update copyright year
+            $("#current-year").text(new Date().getFullYear());
+        });
+
+        
+        // ========== JSON/AJAX Functionality ==========
+        // Load all books
+        $("#load-all-books").click(function() {
+            $.ajax({
+                url: "books_api.php",
+                type: "GET",
+                dataType: "json",
+                success: function(data) {
+                    let html = "<h5>All Books</h5><ul class='list-group'>";
+                    data.forEach(function(book) {
+                        html += `
+                            <li class="list-group-item mb-2">
+                                <strong>${book.title}</strong> by ${book.author}<br>
+                                Copies Sold: ${book.copies_sold}<br>
+                                Awards: ${book.awards}<br>
+                                Translations: ${book.translations}<br>
+                                <small>${book.description}</small>
+                            </li>
+                        `;
+                    });
+                    html += "</ul>";
+                    $("#all-books-container").html(html);
+                },
+                error: function(xhr, status, error) {
+                    $("#all-books-container").html(`<div class="alert alert-danger">Error loading books: ${error}</div>`);
+                }
+            });
+        });
+
+        // Load single book
+        $("#load-single-book").click(function() {
+            const bookId = $("#book-id").val();
+            if (!bookId) {
+                $("#single-book-container").html(`<div class="alert alert-warning">Please enter a book ID</div>`);
+                return;
+            }
+
+            $.ajax({
+                url: "books_api.php?id=" + bookId,
+                type: "GET",
+                dataType: "json",
+                success: function(book) {
+                    if (book.error) {
+                        $("#single-book-container").html(`<div class="alert alert-warning">${book.error}</div>`);
+                    } else {
+                        const html = `
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5>Book Details (ID: ${book.id})</h5>
+                                    <p><strong>Title:</strong> ${book.title}</p>
+                                    <p><strong>Author:</strong> ${book.author}</p>
+                                    <p><strong>Copies Sold:</strong> ${book.copies_sold}</p>
+                                    <p><strong>Awards:</strong> ${book.awards}</p>
+                                    <p><strong>Translations:</strong> ${book.translations}</p>
+                                    <p><strong>Description:</strong> ${book.description}</p>
+                                </div>
+                            </div>
+                        `;
+                        $("#single-book-container").html(html);
+                    }
+                },
+                error: function(xhr, status, error) {
+                    $("#single-book-container").html(`<div class="alert alert-danger">Error loading book: ${error}</div>`);
+                }
+            });
+        });
+
+        // Add new book
+        $("#add-book-form").submit(function(e) {
+            e.preventDefault();
+    
+            const newBook = {
+                title: $("#book-title").val(),
+                author: $("#book-author").val(),
+                copies_sold: $("#book-copies").val(),
+                awards: $("#book-awards").val(),
+                translations: $("#book-translations").val(),
+                description: $("#book-description").val()
+            };
+
+            $.ajax({
+                url: "books_api.php",
+                type: "POST",
+                contentType: "application/json",
+                data: JSON.stringify(newBook),
+                dataType: "json",
+                success: function(data) {
+                    $("#add-book-form")[0].reset();
+                    $("#all-books-container").prepend(`
+                        <div class="alert alert-success">Book added successfully with ID: ${data.id}</div>
+                    `);
+                },
+                error: function(xhr, status, error) {
+                    $("#all-books-container").html(`<div class="alert alert-danger">Error adding book: ${error}</div>`);
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

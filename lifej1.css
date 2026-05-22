@@ -1,0 +1,823 @@
+/* ===== Updated Color Scheme ===== */
+:root {
+    --primary-color: #5c78f3;  /* Vibrant blue */
+    --secondary-color: #3a0ca3;  /* Deep purple-blue */
+    --accent-color: #ee4b94;  /* Bright pink */
+    --light-color: #f8f9fa;
+    --dark-color: #212529;
+    --text-color: #333;
+    --text-light: #6c757d;
+    --success-color: #67d2f2;  /* Bright cyan */
+    --warning-color: #f8961e;  /* Vibrant orange */
+    --info-color: #7209b7;  /* Royal purple */
+    --highlight-color: #c431ae;  /* Magenta */
+}
+
+/* ===== Base Styles ===== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+    background: linear-gradient(145deg, #f8f2ff 0%, #f3cee2 50%, #cad6f6 100%);
+    padding-top: 80px;
+    line-height: 1.6;
+    transition: all 0.3s ease;
+}
+
+.container {
+    padding: 20px;
+    max-width: 1200px;
+}
+
+/* ===== Navbar Styles ===== */
+.navbar {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color)) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+    padding: 10px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.brand-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-left: 10px;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.navbar-logo {
+    height: 50px;
+    width: auto;
+    border-radius: 50%;
+    border: 2px solid var(--light-color);
+    transition: transform 0.3s ease;
+}
+
+.navbar-logo:hover {
+    transform: rotate(15deg);
+}
+
+.nav-link {
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0 8px;
+    color: rgba(255, 255, 255, 0.9) !important;
+    position: relative;
+    padding: 8px 0;
+    transition: all 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--secondary-color);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+.nav-link.active {
+    color: white !important;
+    font-weight: 600;
+}
+
+/* ===== Typography ===== */
+h1, h2, h3, h4, h5 {
+    font-family: 'Georgia', serif;
+    color: var(--dark-color);
+    margin-bottom: 1.5rem;
+    position: relative;
+    font-style: italic;
+}
+
+h2 {
+    font-size: 2.2rem;
+    padding-bottom: 10px;
+    text-decoration: underline;
+    text-decoration-color: var(--accent-color);
+    text-underline-offset: 8px;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    border-radius: 2px;
+}
+
+p {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    line-height: 1.8;
+}
+
+.lead {
+    font-size: 1.3rem;
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+/* ===== Book Section Styles ===== */
+#book-section, #author-section, #second-book-section {
+    margin-bottom: 50px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+}
+
+#book-section:hover, #author-section:hover, #second-book-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.book-description {
+    background: rgba(255, 255, 255, 0.7);
+    border-left: 4px solid var(--accent-color);
+    padding: 25px;
+    border-radius: 0 12px 12px 0;
+    margin: 25px 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    position: relative;
+    overflow: hidden;
+}
+
+.book-description::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0) 100%);
+    z-index: -1;
+}
+
+.author-bio {
+    background: rgba(255, 255, 255, 0.7);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.author-bio::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: var(--accent-color);
+    opacity: 0.2;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+/* ===== Button Styles ===== */
+.btn {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+    margin: 8px 8px 8px 0;
+    transition: all 0.4s ease;
+    border-radius: 30px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.5px;
+    position: relative;
+    overflow: hidden;
+    border: none !important;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: all 0.6s ease;
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: #4a68d1;
+}
+
+.btn-success {
+    background-color: var(--success-color);
+    color: var(--dark-color);
+}
+
+.btn-success:hover {
+    background-color: #5bc2e7;
+}
+
+.btn-warning {
+    background-color: var(--warning-color);
+}
+
+.btn-warning:hover {
+    background-color: #e08715;
+}
+
+.btn-info {
+    background-color: var(--info-color);
+}
+
+/* ===== Image Styles ===== */
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    transition: all 0.4s ease;
+    border-radius: 10px !important;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.img-fluid:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.rounded-circle {
+    border-radius: 50% !important;
+    transition: transform 0.5s ease;
+    border: 3px solid var(--light-color);
+}
+
+.rounded-circle:hover {
+    transform: rotate(5deg);
+}
+
+.custom-image-style {
+    border: 3px solid var(--accent-color);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s ease;
+}
+
+.custom-image-style:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== Card Styles ===== */
+.fun-fact-card {
+    border: none !important;
+    border-radius: 12px !important;
+    background: linear-gradient(145deg, rgba(255,255,255,0.8), rgba(255,255,255,0.7)) !important;
+    backdrop-filter: blur(5px);
+    transition: all 0.4s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.fun-fact-card:hover {
+    transform: translateY(-8px) !important;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2) !important;
+}
+
+.fun-fact-card .card-body {
+    padding: 25px;
+    flex-grow: 1;
+}
+
+.fun-fact-card .card-title {
+    color: var(--accent-color) !important;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.fun-fact-card .card-text {
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+/* ===== Table Styles ===== */
+.table {
+    margin-top: 20px;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 12px !important;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.8);
+    color: var(--light-color);
+    transition: all 0.5s ease;
+}
+
+.table th {
+    background: rgba(255, 255, 255, 0.8) !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: var(--dark-color) !important;
+}
+
+.table td {
+    color: var(--primary-color) !important;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(200, 181, 181, 0.5) !important;
+}
+
+.btn-sm {
+    background-color: rgb(153, 127, 127);
+}
+
+.btn-sm:hover {
+    background-color: rgb(206, 145, 145);
+}
+
+/* DOM Diagram Button Styles */
+.dom-diagram-btn-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+  
+.dom-diagram-btn {
+    padding: 12px 20px;
+    font-weight: 600;
+    border-radius: 50px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    background: linear-gradient(135deg, #3a0ca3, #5c78f3);
+    border: none;
+    color: white;
+}
+  
+.dom-diagram-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, #5c78f3, #3a0ca3);
+    color: white;
+}
+  
+.dom-diagram-btn:active {
+    transform: translateY(1px);
+}
+
+@media (max-width: 768px) {
+    .dom-diagram-btn-container {
+      bottom: 10px;
+      right: 10px;
+    }
+    
+    .dom-diagram-btn {
+      padding: 10px 16px;
+      font-size: 14px;
+    }
+}
+
+/* ===== Footer Styles ===== */
+.footer {
+    background-color: var(--dark-color);
+    color: white;
+    padding: 80px 0 0;
+    margin-top: 80px;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.footer-logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+    border: 2px solid var(--light-color);
+    transition: transform 0.3s ease;
+}
+
+.footer-logo:hover {
+    transform: rotate(15deg);
+}
+
+.footer-brand h4 {
+    color: white;
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.footer p {
+    opacity: 0.8;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: white;
+}
+
+.social-links {
+    display: flex;
+    margin-top: 20px;
+}
+
+.social-links a {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.social-links a:hover {
+    background: var(--accent-color);
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 5px 15px rgba(238, 75, 148, 0.4);
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.7);
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    display: inline-block;
+}
+
+.footer-links a:hover {
+    color: white;
+    padding-left: 8px;
+    text-decoration: none;
+}
+
+.contact-info {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info li {
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.contact-info i {
+    margin-right: 12px;
+    color: var(--accent-color);
+    width: 20px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 25px;
+    margin-top: 50px;
+    text-align: center;
+    color: white;
+    font-size: 0.95rem;
+}
+
+/* ===== jQuery-specific classes ===== */
+.highlight-section {
+    background-color: rgba(92, 120, 243, 0.1);
+    padding: 20px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 0 2px rgba(92, 120, 243, 0.3);
+}
+
+.img-glow {
+    filter: drop-shadow(0 0 12px var(--primary-color));
+    animation: pulse 2s infinite alternate;
+}
+
+.text-rainbow {
+    animation: rainbow 2s linear infinite;
+}
+
+
+/* JSON/AJAX Section Styles */
+#json-ajax-section {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+#json-ajax-section .card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+#json-ajax-section .card-header {
+    border-radius: 12px 12px 0 0 !important;
+}
+
+#json-ajax-section .list-group-item {
+    border-radius: 8px !important;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+#json-ajax-section .list-group-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#json-ajax-section .form-control {
+    border-radius: 8px;
+    padding: 10px 15px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#json-ajax-section .form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(92, 120, 243, 0.25);
+}
+
+#json-ajax-section .alert {
+    border-radius: 8px;
+}
+
+
+/* ===== Animations ===== */
+@keyframes rainbow {
+    0% { color: red; }
+    14% { color: orange; }
+    28% { color: yellow; }
+    42% { color: green; }
+    57% { color: blue; }
+    71% { color: indigo; }
+    85% { color: violet; }
+    100% { color: red; }
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+    0% { filter: drop-shadow(0 0 8px var(--primary-color)); }
+    100% { filter: drop-shadow(0 0 16px var(--accent-color)); }
+}
+
+@media (max-width: 1200px) {
+    .container {
+        padding: 15px;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    #book-section, #author-section, #second-book-section {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 992px) {
+    .navbar-brand {
+        flex-direction: row;
+    }
+    
+    .brand-name {
+        font-size: 1.3rem;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+    }
+    
+    .book-description, .author-bio {
+        padding: 20px;
+    }
+    
+    .footer-logo {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .footer-brand h4 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 70px;
+    }
+    
+    .navbar-logo {
+        height: 40px;
+    }
+    
+    .brand-name {
+        font-size: 1.2rem;
+    }
+    
+    h2 {
+        font-size: 1.6rem;
+        padding-bottom: 8px;
+    }
+    
+    h2::after {
+        width: 60px;
+        height: 3px;
+    }
+    
+    #book-section, #author-section, #second-book-section {
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+    
+    .book-description, .author-bio {
+        padding: 15px;
+    }
+    
+    .btn {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+    }
+    
+    .footer {
+        padding: 60px 0 0;
+        margin-top: 60px;
+    }
+    
+    .footer .col-md-4, .footer .col-md-2 {
+        margin-bottom: 30px;
+    }
+    
+    .footer-logo {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .footer-brand h4 {
+        font-size: 1.3rem;
+    }
+    
+    .social-links a {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        padding-top: 60px;
+    }
+    
+    .navbar-logo {
+        height: 35px;
+    }
+    
+    .brand-name {
+        font-size: 1.1rem;
+        margin-left: 8px;
+    }
+    
+    h2 {
+        font-size: 1.4rem;
+        text-underline-offset: 6px;
+    }
+    
+    p, .lead {
+        font-size: 1rem;
+    }
+    
+    .lead {
+        font-size: 1.1rem;
+    }
+    
+    #book-section, #author-section, #second-book-section {
+        padding: 15px;
+    }
+    
+    .img-fluid {
+        margin-bottom: 15px;
+    }
+    
+    .table {
+        font-size: 0.9rem;
+    }
+    
+    .table th, .table td {
+        padding: 8px;
+    }
+    
+    .footer {
+        padding: 40px 0 0;
+    }
+    
+    .footer-logo {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .footer-brand h4 {
+        font-size: 1.2rem;
+    }
+    
+    .footer p {
+        font-size: 0.9rem;
+    }
+    
+    .footer-links a, .contact-info li {
+        font-size: 0.9rem;
+    }
+    
+    .social-links a {
+        width: 35px;
+        height: 35px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .brand-name {
+        font-size: 1rem;
+    }
+    
+    .navbar-toggler {
+        padding: 0.25rem 0.5rem;
+    }
+    
+    h2 {
+        font-size: 1.3rem;
+    }
+    
+    .btn {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+        margin: 5px 5px 5px 0;
+    }
+    
+    .footer-logo {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .footer-brand h4 {
+        font-size: 1.1rem;
+    }
+}

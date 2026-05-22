@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "title": "The Life-Changing Magic of Tidying Up",
+        "author": "Marie Kondo",
+        "copies_sold": "11 million",
+        "awards": "Goodreads Choice Award",
+        "translations": "40+",
+        "description": "This book is a guide to decluttering and organizing your home and life. Marie Kondo introduces the KonMari Method, a simple and effective way to tidy up your space and transform your life."
+    },
+    {
+        "id": 2,
+        "title": "Atomic Habits",
+        "author": "James Clear",
+        "copies_sold": "5 million",
+        "awards": "New York Times Bestseller",
+        "translations": "30+",
+        "description": "\"Atomic Habits\" is a practical guide to building good habits and breaking bad ones. James Clear explains how small changes can lead to remarkable results over time."
+    },
+    {
+        "title": "The Little Book of Hygge: Danish Secrets to Happy Living",
+        "author": "Meik Wiking ",
+        "copies_sold": "1 million+",
+        "awards": "NEW YORK TIMES and SUNDAY TIMES BESTSELLER ",
+        "translations": "38",
+        "description": "Loosely translated, Hygge pronounced Hoo ga is a sense of comfort, togetherness, and weel-being. \"Hygge is about an atmosphere and an experience,\" Wiking. explains. \"It is about being with the people we love. A feeling of home.",
+        "id": 3
+    },
+    {
+        "title": "tgghjgh",
+        "author": "hchjjs",
+        "copies_sold": "22",
+        "awards": "njhsjjjko",
+        "translations": "25",
+        "description": "ddfdg",
+        "id": 4
+    }
+]
